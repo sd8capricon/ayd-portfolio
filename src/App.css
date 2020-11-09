@@ -7,8 +7,14 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background-color: rgb(73, 79, 82);
+  background-color: black;
   color: white;
+  text-decoration: none;
+  transition-duration: 0.7s;
+}
+
+nav:hover{
+  background-color: black;
 }
 
 .nav-links{
@@ -23,3 +29,13 @@ nav{
 .nav-item{
   margin: 0% 10%;
 }
+
+.myVideo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
