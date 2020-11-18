@@ -1,17 +1,24 @@
-.App {
-  text-align: center;
+body{
+  background-image: url("/src/images/background/image-250nw-482355415.jpg");
 }
-.nav{
+
+/* Navbar */
+
+.navbar{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   background-color: black;
   transition-duration: 0.7s;
-
+  text-align: center;
 }
 
-.nav-c-brand{
-  color: white !important;
-  padding: 0.5% 1% 0%;
-  font-size: 2.4rem;
-  text-shadow: 4px 4px 4px rgb(0, 132, 255);
+.nav-img{
+  text-align: left;
+  padding: 0px;
+  padding-left: 20px;
+  height: 3.7rem;
+  width: 29rem;
 }
 
 .nav-links{
@@ -23,12 +30,132 @@
   text-decoration: underline;
 }
 
-.Video{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
+/* Home */
+.carousel-img{
+  width: 100vw;
+  height: 100vh;
 }
 
+
+/* About */
+
+.aboutNav{
+  margin-top: 40px;
+}
+
+.about-section{
+  background-color: white;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.about-p{
+  text-align: left;
+}
+
+.about-list{
+  text-align: left;
+  list-style-type: none;
+  margin-right: 50%;
+}
+
+
+/* Project */
+
+.project-title{
+  text-align: center;
+  padding: 0.5%;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
+.project-img{
+  text-align: center;
+  height: 480px;
+  width: 730px;
+}
+
+.project-sub{
+  padding: 1%;
+}
+
+
+/* Contact */
+
+.contact-links{
+  list-style: none;
+}
+
+.contact-ico{
+  padding: 2%;
+  font-size: 30px;
+}
+
+.footer-ico {
+  margin: 12px;
+  color: black;
+}
+
+.fa-envelope:hover{
+  color: grey;
+}
+
+.fa-blogger{
+  color: #fc4f08;
+}
+
+.fa-blogger:hover{
+  color: #e24000;
+}
+
+.fa-linkedin{
+  color: #0072b1;
+}
+
+.fa-linkedin:hover{
+  color: #005e91;
+}
+
+/* media */
+@media screen and (max-width:768px){
+  .carousel-img{
+    object-fit: cover;
+    
+  }
+  .nav-img{
+    padding: 0px;
+    width: 16rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (min-width:992px){
+  .about-section{
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  .about-p{
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  
+  .about-section{
+    font-size: small;
+  }
+
+  .about-list{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .project-img{
+    height: 220px;
+    width: 320px;
+  }
+}

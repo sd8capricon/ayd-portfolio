@@ -18,9 +18,9 @@
 .env.test.local
 .env.production.local
 
-#videos
-/src/videos
-/Nav copy.jsx
+#Images
+images/
+
 
 npm-debug.log*
 yarn-debug.log*

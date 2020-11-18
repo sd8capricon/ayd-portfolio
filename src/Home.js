@@ -1,18 +1,20 @@
 import React from "react";
 import MyNav from "./components/Nav";
+import Slider from "./components/BackSlide";
+import ImageCarousel from "./components/ImageCarousel"
 import "./App.css";
-import video from "./videos/video.mp4";
+
 
 function Home() {
     return (
-      <div>
-      <MyNav color="transparent"/>
-        <video autoPlay muted loop className="Video">
-            <source src={video} type="video/mp4"/>
-        </video>
+      <div>        
+          <MyNav color="transparent"/>
+          <ImageCarousel/>
+        {/* <Slider/> */}
       </div>
     );
   }
   
   export default Home;
+  
   

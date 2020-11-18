@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import  {Navbar, Nav} from "react-bootstrap"
 import "../App.css"
 
+//Brand
+import Logo from '../images/YCDLogo1.png';
+
 function MyNav(props){
     const [hover, setHover] = useState(false);
     function setColor(){
@@ -18,16 +21,22 @@ function MyNav(props){
             onMouseOver={setColor} 
             style={hover? {backgroundColor: "black"}: {backgroundColor: props.color}}  
             onMouseLeave={removeColor}
-            className="nav"
+            collapseOnSelect={true}
+            className="navbar"
             expand="lg">
-                <Navbar.Brand href="/" className="nav-c-brand">Architect Yogesh Dhaigude</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Brand href="/" className="nav-brand">
+                    <img src={Logo}
+                        className="d-inline-block align-top nav-img"
+                        alt="AYDA Logo"
+                        />
+                </Navbar.Brand>
+                <Navbar.Toggle style={{zIndex:"1"}} aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav" style={{zIndex:"1"}}>
                     <Nav className="ml-auto">
                         <Nav.Link className="nav-links" href="/">Home</Nav.Link>
                         <Nav.Link className="nav-links" href="/about">About</Nav.Link>
                         <Nav.Link className="nav-links" href="/projects">Projects</Nav.Link>
-                        <Nav.Link className="nav-links" href="/contact">Contacts</Nav.Link>
+                        <Nav.Link className="nav-links" href="/contact">Contact</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
