@@ -25,7 +25,7 @@ function About() {
         </Nav>
         
         <div className="about-section" id="ABOUT" data-aos="zoom-in-up" data-aos-duration="1000">
-          <h1 className="project-title">ABOUT US</h1>
+          <h1 className="about-title">ABOUT US</h1>
           <p className="about-p">
             We are an established multi-desciplinary comprehensive Architectural practice based in Mumbai & Thane, founded by Architect Yogesh Dhaigude with extensive experience in developing a wide range of projects such as Redevelopment of large and small scale residential projects, masterplanning schemes, commercial buildings with expertise in integration of MEP services and structure with design at an advance and complex level in view of time and cost efficiency. We are committed to designing high quality buildings that meet the needs and aspirations of clients and users alike and achieve complete client satisfaction.
           </p>
@@ -45,7 +45,7 @@ function About() {
           </ul>
         </div>
         <div className="about-section" id="DESIGN PHILOSOPHY" style={{backgroundColor:"black", color:"white"}} data-aos="zoom-in-up" data-aos-duration="1000">
-          <h1 className="project-title" >DESIGN PHILOSOPHY</h1>
+          <h1 className="about-title" >DESIGN PHILOSOPHY</h1>
             <p className="about-p">To translate client’s needs and aspirations into innovative design solutions having <strong>SUSTAINABLE</strong> and lasting qualities and creating spaces that are <strong>AFFORDABLE, LIVABLE</strong>, pleasant and inspirational with functional form to celebrate <strong>IDENTITY.</strong></p>
             <br/>
             <ul className="about-list">
@@ -68,7 +68,7 @@ function About() {
             </ul>
         </div>
         <div className="about-section" id="SERVICES" data-aos="zoom-in-up" data-aos-duration="1000">
-          <h1 className="project-title" >Services</h1>
+          <h1 className="about-title" >Services</h1>
           <h2>We provide integrated specialised services in</h2>
           <br/>
           <br/>
@@ -84,7 +84,7 @@ function About() {
           </ul>
         </div>
         <div className="about-section" id="PUBLICATIONS" style={{backgroundColor:"black", color:"white"}} data-aos="zoom-in-up" data-aos-duration="1000">
-          <h1 className="project-title" id="PUBLICATIONS">Publications</h1>
+          <h1 className="about-title" id="PUBLICATIONS">Publications</h1>
           <ul className="about-list pub">
             <li><h5>2010 : Urban Renewal of MIDC Area in Thane (<a rel="noreferrer" target="_blank" href="https://www.academia.edu/40048503/URBAN_RENEWAL_OF_MIDC_IN_THANE_Yogesh_Dhaigude">www.Academia.edu</a>)</h5></li>
             <br/>
