@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Col, Modal, Carousel, Button} from 'react-bootstrap';
+import {Col, Modal, Carousel} from 'react-bootstrap';
 
 function ProjectView(props){
 
