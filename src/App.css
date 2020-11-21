@@ -1,5 +1,5 @@
 body{
-  background-image: url("/src/images/background/image-250nw-482355415.jpg");
+  background-color: black;
 }
 
 /* Navbar */
@@ -72,10 +72,6 @@ body{
 
 /* Project */
 
-.project-title{
-
-}
-
 .project-button{
   background: none;
 	color: inherit;
@@ -105,10 +101,13 @@ body{
 
 
 .project-sub{
+  color: white !important;
+  text-transform: capitalize;
   position: fixed;
-  top: 50%;
-  left: 40%;
+  top: 90%;
+  left: 2%;
   z-index: 10;
+  transition-duration: 0.7s;
 }
 
 .close{
@@ -123,8 +122,14 @@ body{
 }
 
 .modal-body{
-  background-color: black;
+  background-color: grey;
   padding: 0%;
+}
+
+.modal-footer{
+  margin: 0%;
+  padding: 0%;
+  display: block;
 }
 
 
@@ -132,16 +137,16 @@ body{
 
 .contact-links{
   list-style: none;
+  display: flex;
 }
 
 .contact-ico{
-  padding: 2%;
-  font-size: 30px;
+  padding: 5% !important;
+  font-size: 1rem;
 }
 
-.footer-ico {
-  margin: 12px;
-  color: black;
+.fa-envelope{
+  color: red;
 }
 
 .fa-envelope:hover{
@@ -149,19 +154,19 @@ body{
 }
 
 .fa-blogger{
-  color: #fc4f08;
+  color: #fc9a08;
 }
 
 .fa-blogger:hover{
-  color: #e24000;
+  color: #e28800;
 }
 
 .fa-linkedin{
-  color: #0072b1;
+  color: #00a6ff;
 }
 
 .fa-linkedin:hover{
-  color: #005e91;
+  color: #006ca7;
 }
 
 /* media */

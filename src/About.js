@@ -40,12 +40,12 @@ function About() {
             </li>
             <li>
               <h4><em>Our Core Strength</em></h4>
-              <p>Our strength has always been our eagerness to explore and experiment; in fact we look forward to innovating and have often done so.</p>
+              <p  id="DESIGN PHILOSOPHY">Our strength has always been our eagerness to explore and experiment; in fact we look forward to innovating and have often done so.</p>
             </li>
           </ul>
         </div>
-        <div className="about-section" id="DESIGN PHILOSOPHY" style={{backgroundColor:"black", color:"white"}} data-aos="zoom-in-up" data-aos-duration="1000">
-          <h1 className="about-title" >DESIGN PHILOSOPHY</h1>
+        <div className="about-section" style={{backgroundColor:"black", color:"white"}} data-aos="zoom-in-up" data-aos-duration="1000">
+          <h1 className="about-title">DESIGN PHILOSOPHY</h1>
             <p className="about-p">To translate client’s needs and aspirations into innovative design solutions having <strong>SUSTAINABLE</strong> and lasting qualities and creating spaces that are <strong>AFFORDABLE, LIVABLE</strong>, pleasant and inspirational with functional form to celebrate <strong>IDENTITY.</strong></p>
             <br/>
             <ul className="about-list">
@@ -63,11 +63,11 @@ function About() {
               </li>
               <li>
                 <h4><em>IDENTITY</em></h4>
-                <p>WE THINK BUILDINGS ARE PLACES OF HUMAN INTERACTIONS AND OUR BUILDINGS RESPONDS TO CLIMATE AND ECOLOGY AND ARCHITECTURALLY CELEBRATES ITS IDENTITY</p>
+                <p  id="SERVICES">WE THINK BUILDINGS ARE PLACES OF HUMAN INTERACTIONS AND OUR BUILDINGS RESPONDS TO CLIMATE AND ECOLOGY AND ARCHITECTURALLY CELEBRATES ITS IDENTITY</p>
               </li>
             </ul>
         </div>
-        <div className="about-section" id="SERVICES" data-aos="zoom-in-up" data-aos-duration="1000">
+        <div className="about-section" data-aos="zoom-in-up" data-aos-duration="1000">
           <h1 className="about-title" >Services</h1>
           <h2>We provide integrated specialised services in</h2>
           <br/>
@@ -83,7 +83,7 @@ function About() {
               <Services service="3D VISUALISATION"/>
           </ul>
         </div>
-        <div className="about-section" id="PUBLICATIONS" style={{backgroundColor:"black", color:"white"}} data-aos="zoom-in-up" data-aos-duration="1000">
+        <div className="about-section" style={{backgroundColor:"black", color:"white"}} data-aos="zoom-in-up" data-aos-duration="1000">
           <h1 className="about-title" id="PUBLICATIONS">Publications</h1>
           <ul className="about-list pub">
             <li><h5>2010 : Urban Renewal of MIDC Area in Thane (<a rel="noreferrer" target="_blank" href="https://www.academia.edu/40048503/URBAN_RENEWAL_OF_MIDC_IN_THANE_Yogesh_Dhaigude">www.Academia.edu</a>)</h5></li>

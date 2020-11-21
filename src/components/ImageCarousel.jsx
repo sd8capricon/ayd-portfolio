@@ -19,9 +19,6 @@ export default function ImageCarousel(){
                         src={image1}
                         alt="First Slide"
                     />
-                    <Carousel.Caption>
-                        <h3>First Slide</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -29,9 +26,6 @@ export default function ImageCarousel(){
                         src={image2}
                         alt="Second Slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Second Slide</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -39,9 +33,6 @@ export default function ImageCarousel(){
                         src={image3}
                         alt="Third Slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Third Slide</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -49,29 +40,20 @@ export default function ImageCarousel(){
                         src={image4}
                         alt="Fourth Slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Fourth Slide</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="carousel-img"
                         src={image5}
-                        alt="First Slide"
+                        alt="Fifth Slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Fifth Slide</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="carousel-img"
                         src={image6}
-                        alt="First Slide"
+                        alt="Sixth Slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Sixth Slide</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         </div>

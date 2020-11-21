@@ -21,7 +21,7 @@ function ProjectView(props){
 
     return(
         <>
-        <Col  data-aos="zoom-in-up" data-aos-duration="1000">
+        <Col data-aos="zoom-in-up" data-aos-duration="1000">
             <button className="project-button" onClick={handleOpen}>
                 <div
                     onMouseOver={handleMouseOver} 
@@ -43,31 +43,91 @@ function ProjectView(props){
         </Col>
             <Modal size="xl" centered show={show} onHide={handleClose}>
                 <Modal.Header className="modal-header" closeButton>
-                    <Modal.Title><h1>{props.name}</h1></Modal.Title>
+                    <Modal.Title><h2>{props.name}</h2></Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modal-body">
-                    <Carousel>
-                        <Carousel.Item>
+                    <Carousel pause={false}>
+                        <Carousel.Item interval={3000}>
                             <img
                                 className="d-block w-100"
                                 src={props.img1}
                                 alt="1"
                             />
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item interval={3000}>
                             <img
                                 className="d-block w-100"
-                                src={props.img2}
+                                src={props.img2 ? props.img2 : props.img1}
                                 alt="2"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img3 ? props.img3 : props.img1}
+                                alt="3"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img4 ? props.img4 : props.img2}
+                                alt="4"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img5 ? props.img5 : props.img1}
+                                alt="5"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img6 ? props.img7 : props.img2}
+                                alt="6"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img7 ? props.img7 : props.img3}
+                                alt="7"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img8 ? props.img8 : props.img1}
+                                alt="8"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img9 ? props.img9 : props.img2}
+                                alt="9"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item interval={3000}>
+                            <img
+                                className="d-block w-100"
+                                src={props.img10 ? props.img10 : props.img3}
+                                alt="10"
                             />
                         </Carousel.Item>
                     </Carousel>
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer className="modal-footer">
                     <h2 className="mr-auto">Info</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra quis lectus non lobortis. In hac habitasse platea dictumst. Quisque eu eros laoreet nulla eleifend lacinia. Nam consectetur hendrerit sem, ac ornare elit gravida sed. In lacinia sapien turpis, eget porta quam auctor vel. Integer lectus elit, tempor et erat quis, ornare congue dui. Morbi at neque vel risus varius commodo. Mauris in auctor eros. Vestibulum at turpis ac neque molestie imperdiet. In hac habitasse platea dictumst. Nunc tincidunt justo mattis, placerat mauris id, sodales libero. Duis leo felis, vulputate id ante et, hendrerit accumsan elit
-                    </p>
+                    <div>
+                        <ul>
+                            <li><strong>client</strong>: {props.client}</li>
+                            <li><strong>Location</strong>: {props.address}</li>
+                            <li><strong>Area</strong>: {props.area}</li>
+                        </ul>
+                    </div>
                 </Modal.Footer>
             </Modal>
         </>

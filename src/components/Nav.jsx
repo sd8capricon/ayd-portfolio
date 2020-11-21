@@ -30,7 +30,7 @@ function MyNav(props){
                         alt="AYDA Logo"
                         />
                 </Navbar.Brand>
-                <Navbar.Toggle style={{zIndex:"1"}} aria-controls="basic-navbar-nav"/>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav" style={{zIndex:"1"}}>
                     <Nav className="ml-auto">
                         <Nav.Link className="nav-links" href="/">Home</Nav.Link>
