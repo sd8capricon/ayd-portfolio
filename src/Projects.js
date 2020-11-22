@@ -1,6 +1,7 @@
 import React from "react";
 import MyNav from "./components/Nav";
 import ProjectView from "./components/ProjectView";
+import Footer from "./components/Footer";
 import {Container, Row} from "react-bootstrap";
 
 // images
@@ -65,7 +66,7 @@ function Projects() {
             <Row md={2} noGutters={true}>        
               <ProjectView 
                   imgMain={ANNABHAU} 
-                  name="SahityRatna Annabhau Sathe Smarak" 
+                  name="Sahitya Ratna Annabhau Sathe Smarak" 
                   img1={ANNABHAU}
                   img2={ANNA1}
                   img3={ANNA2}
@@ -104,7 +105,7 @@ function Projects() {
               />
               <ProjectView 
                   imgMain={ROWHOUSE} 
-                  name="SHAHPUR ROW HOUSES" 
+                  name="Shahpur row houses" 
                   img1={ROWHOUSE}
                   img2={HOUSE1}
                   img3={HOUSE2}
@@ -114,23 +115,26 @@ function Projects() {
               />
               <ProjectView 
                   imgMain={SAIDHAM} 
-                  name="SAI DHAM" 
+                  name="Sai dham" 
                   img1={SAIDHAM}
                   img2={SAI1}
                   img3={SAI2}
-                  client=""
-                  address=""
-                  area=""
+                  client="Saidham CHS"
+                  address="Kurla (E), Mumbai"
+                  area="120000 sq.ft."
               />
               <ProjectView 
                   imgMain={JAGRUTI} 
-                  name="JAGRUTI CHS" 
+                  name="Jagruti CHS" 
                   img1={JAGRUTI}
                   img2={JAG1}
                   img3={JAGRUTI}
+                  client="Pride Enterprises"
+                  address="Andheri (E), Mumbai"
+                  area="23500 sq.ft."
               />
               <ProjectView
-                  name="Mc COM INDUSTRIES"
+                  name="Mc Com Industries"
                   imgMain={McCOM}
                   img1={McCOM}
                   img2={COM1}
@@ -140,7 +144,7 @@ function Projects() {
                   area="80555 Sq.ft."
               />
               <ProjectView
-                  name="SASS OFFICE"
+                  name="SASS Office"
                   imgMain={SASSM}
                   img1={SASSM}
                   img2={SASSM1}
@@ -174,6 +178,9 @@ function Projects() {
               />
             </Row>
           </Container>
+          <div className="footer">
+          <Footer/>
+        </div>
       </div>
     );
   }

@@ -5,7 +5,7 @@ import  {Navbar, Nav} from "react-bootstrap"
 import "../App.css"
 
 //Brand
-import Logo from '../images/YCDLogo1.png';
+import Logo from '../images/YCDLogo2.png';
 
 function MyNav(props){
     const [hover, setHover] = useState(false);

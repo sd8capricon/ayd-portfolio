@@ -12,43 +12,43 @@ import image6 from "../images/carousel/6.jpg";
 export default function ImageCarousel(){
     return(
         <div className="carousel">
-            <Carousel>
-                <Carousel.Item>
+            <Carousel pause={false}>
+                <Carousel.Item interval={7000}>
                     <img
                         className="carousel-img"
                         src={image1}
                         alt="First Slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={7000}>
                     <img
                         className="carousel-img"
                         src={image2}
                         alt="Second Slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={7000}>
                     <img
                         className="carousel-img"
                         src={image3}
                         alt="Third Slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={7000}>
                     <img
                         className="carousel-img"
                         src={image4}
                         alt="Fourth Slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={7000}>
                     <img
                         className="carousel-img"
                         src={image5}
                         alt="Fifth Slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={7000}>
                     <img
                         className="carousel-img"
                         src={image6}

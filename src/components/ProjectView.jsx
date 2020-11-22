@@ -33,11 +33,11 @@ function ProjectView(props){
                         alt="project"
                         style={isHover? {opacity:"0.5"} :{opacity:"1"}}
                     />
-                    <h2 
+                    <h3 
                         className="project-sub"
                         style={isHover? {opacity:"1", color:"black"} :{opacity:"0"}}>
                             {props.name}
-                    </h2>
+                    </h3>
                 </div>
             </button>
         </Col>
@@ -120,7 +120,7 @@ function ProjectView(props){
                     </Carousel>
                 </Modal.Body>
                 <Modal.Footer className="modal-footer">
-                    <h2 className="mr-auto">Info</h2>
+                    <h4 className="mr-auto">Info</h4>
                     <div>
                         <ul>
                             <li><strong>client</strong>: {props.client}</li>
