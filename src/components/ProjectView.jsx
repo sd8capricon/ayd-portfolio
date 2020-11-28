@@ -46,7 +46,7 @@ function ProjectView(props){
                     <Modal.Title><h2>{props.name}</h2></Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modal-body">
-                    <Carousel pause={false}>
+                    <Carousel indicators={false} pause={false}>
                         <Carousel.Item interval={3000}>
                             <img
                                 className="d-block w-100"

@@ -12,7 +12,7 @@ import image6 from "../images/carousel/6.jpg";
 export default function ImageCarousel(){
     return(
         <div className="carousel">
-            <Carousel pause={false}>
+            <Carousel indicators={false} pause={false}>
                 <Carousel.Item interval={7000}>
                     <img
                         className="carousel-img"

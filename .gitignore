@@ -9,7 +9,13 @@
 /coverage
 
 # production
+/backend
 /build
+/dist
+/.firebase
+
+#map
+/components/Map.jsx
 
 # misc
 .DS_Store

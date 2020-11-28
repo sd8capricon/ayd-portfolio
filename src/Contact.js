@@ -1,7 +1,11 @@
 import React from "react";
+import {Col ,Container,Row} from "react-bootstrap";
 import MyNav from "./components/Nav";
-import MapContainer from "./components/Map";
+import Form from "./components/Form";
 import Footer from "./components/Footer";
+
+//image
+import map from "./images/map.png"
 
 function Contact() {
     return (
@@ -33,12 +37,20 @@ function Contact() {
             </address>
         </div>
         <div data-aos="zoom-in-up" data-aos-duration="1000">
-        <MapContainer/>
+            <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Architect+Yogesh+Dhaigude/@19.0146542,72.8223423,15z/data=!4m2!3m1!1s0x0:0xd2cf514881c07906?sa=X&ved=2ahUKEwjm2665_KLtAhWCyzgGHW1RA4EQ_BIwE3oECBIQAw">
+              <img className="map-img" src={map} alt="map"/>
+            </a>
         </div>
-        <div className="footerC" style={{marginTop:"100vh"}}>
-            <div className="footer-C-sub">              
-              <Footer/>
-            </div>
+        <div className="contact-form">
+            <Container>
+              <Row>
+                <Col md={6}><h1 data-aos="fade-right" data-aos-duration="2000">Have<br/>Any<br/>Questions?<br/>Ask Us</h1></Col>
+                <Col md={6}><Form aos="fade-left" duration="2000"/></Col>
+              </Row> 
+            </Container>          
+        </div>
+        <div className="footer">
+            <Footer/>
         </div>
       </div>
     );
