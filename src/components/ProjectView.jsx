@@ -21,26 +21,26 @@ function ProjectView(props){
 
     return(
         <>
-        <Col data-aos="zoom-in-up" data-aos-duration="1000">
-            <button className="project-button" onClick={handleOpen}>
-                <div
-                    onMouseOver={handleMouseOver} 
-                    onMouseLeave={handleMouseOut}
-                    >
-                    <img 
-                        className="project-img"
-                        src={props.imgMain} 
-                        alt="project"
-                        style={isHover? {opacity:"0.5"} :{opacity:"1"}}
-                    />
-                    <h3 
-                        className="project-sub"
-                        style={isHover? {opacity:"1", color:"black"} :{opacity:"0"}}>
-                            {props.name}
-                    </h3>
-                </div>
-            </button>
-        </Col>
+            <Col className="project-column" data-aos="zoom-in-up" data-aos-duration="1000">
+                <button className="project-button" onClick={handleOpen}>
+                    <div
+                        onMouseOver={handleMouseOver} 
+                        onMouseLeave={handleMouseOut}
+                        >
+                        <img 
+                            className="project-img"
+                            src={props.imgMain} 
+                            alt="project"
+                            style={isHover? {opacity:"0.5"} :{opacity:"1"}}
+                        />
+                        <h3 
+                            className="project-sub"
+                            style={isHover? {opacity:"1", color:"black"} :{opacity:"0"}}>
+                                {props.name}
+                        </h3>
+                    </div>
+                </button>
+            </Col>
             <Modal size="xl" centered show={show} onHide={handleClose}>
                 <Modal.Header className="modal-header" closeButton>
                     <Modal.Title><h2>{props.name}</h2></Modal.Title>

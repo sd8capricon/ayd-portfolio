@@ -3,21 +3,21 @@ import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css"
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
-        <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/about" component={About}/>
-          <Route path="/projects" component={Projects}/>
-          <Route path="/contact" component={Contact}/>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

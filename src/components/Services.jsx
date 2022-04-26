@@ -1,15 +1,15 @@
 import React from 'react';
-import {Media} from 'react-bootstrap';
+import { Card } from "react-bootstrap";
 
 export default function Services(props){
     return(
         <div>
-            <Media as="li">
-                <Media.Body>
+            <Card as="li">
+                <Card.Body>
                     <h5>{props.service}</h5>
                     <p><em>{props.description}</em></p>
-                </Media.Body>
-            </Media>
+                </Card.Body>
+            </Card>
             <hr/>
         </div>
     );
