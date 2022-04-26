@@ -1,53 +1,88 @@
-import React, {useState} from "react";
-import {Col, Modal, Carousel} from 'react-bootstrap';
+import { useEffect, useMemo, useState } from "react";
+import { Col, Modal, Carousel } from "react-bootstrap";
 
-function ProjectView(props){
+function ProjectView(props) {
+  const [isHover, setHover] = useState(false);
+  const [show, setShow] = useState(false);
+  let [project, setProject] = useState();
+  let [projectImgs, setProjectImgs] = useState([]);
 
-    const [isHover,setHover]=useState(false);
-    const [show, setShow] = useState(false);
+  function handleMouseOver() {
+    setHover(true);
+  }
+  function handleMouseOut() {
+    setHover(false);
+  }
+  function handleOpen() {
+    setShow(true);
+  }
+  function handleClose() {
+    setShow(false);
+  }
 
-    function handleMouseOver(){
-        setHover(true);
-    }
-    function handleMouseOut(){
-        setHover(false);
-    }
-    function handleOpen(){
-        setShow(true);
-    }
-    function handleClose(){
-        setShow(false);
-    }
+  /*
+    Prop Structure
+        project:{
+            id:,
+            name:,
+            client:,
+            address:,
+            area:,
+            previewImg:,
+            imgs:[]
+        }
+    */
 
-    return(
-        <>
-            <Col className="project-column" data-aos="zoom-in-up" data-aos-duration="1000">
-                <button className="project-button" onClick={handleOpen}>
-                    <div
-                        onMouseOver={handleMouseOver} 
-                        onMouseLeave={handleMouseOut}
-                        >
-                        <img 
-                            className="project-img"
-                            src={props.imgMain} 
-                            alt="project"
-                            style={isHover? {opacity:"0.5"} :{opacity:"1"}}
-                        />
-                        <h3 
-                            className="project-sub"
-                            style={isHover? {opacity:"1", color:"black"} :{opacity:"0"}}>
-                                {props.name}
-                        </h3>
-                    </div>
-                </button>
-            </Col>
-            <Modal size="xl" centered show={show} onHide={handleClose}>
-                <Modal.Header className="modal-header" closeButton>
-                    <Modal.Title><h2>{props.name}</h2></Modal.Title>
-                </Modal.Header>
-                <Modal.Body className="modal-body">
-                    <Carousel indicators={false} pause={false}>
-                        <Carousel.Item interval={3000}>
+  useMemo(() => {
+    setProject(props.project);
+    console.log(props.imgs);
+    setProjectImgs(props.imgs);
+  }, []);
+
+  if (projectImgs.length !== 0) {
+    return (
+      <>
+        <Col
+          className="project-column"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+        >
+          <button className="project-button" onClick={handleOpen}>
+            <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseOut}>
+              <img
+                className="project-img"
+                src={props.imgMain}
+                alt="project"
+                style={isHover ? { opacity: "0.5" } : { opacity: "1" }}
+              />
+              <h3
+                className="project-sub"
+                style={
+                  isHover ? { opacity: "1", color: "black" } : { opacity: "0" }
+                }
+              >
+                {props.name}
+              </h3>
+            </div>
+          </button>
+        </Col>
+        <Modal size="xl" centered show={show} onHide={handleClose}>
+          <Modal.Header className="modal-header" closeButton>
+            <Modal.Title>
+              <h2>{props.name}</h2>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="modal-body">
+            <Carousel indicators={false} pause={false}>
+              {projectImgs.forEach((img) => {
+                console.log(img);
+                return (
+                  <Carousel.Item interval={3000}>
+                    <img className="d-block w-100" src={img} />
+                  </Carousel.Item>
+                );
+              })}
+              {/* <Carousel.Item interval={3000}>
                             <img
                                 className="d-block w-100"
                                 src={props.img1}
@@ -116,22 +151,29 @@ function ProjectView(props){
                                 src={props.img10 ? props.img10 : props.img3}
                                 alt="10"
                             />
-                        </Carousel.Item>
-                    </Carousel>
-                </Modal.Body>
-                <Modal.Footer className="modal-footer">
-                    <h4 className="mr-auto">Info</h4>
-                    <div>
-                        <ul>
-                            <li><strong>client</strong>: {props.client}</li>
-                            <li><strong>Location</strong>: {props.address}</li>
-                            <li><strong>Area</strong>: {props.area}</li>
-                        </ul>
-                    </div>
-                </Modal.Footer>
-            </Modal>
-        </>
+                        </Carousel.Item> */}
+            </Carousel>
+          </Modal.Body>
+          <Modal.Footer className="modal-footer">
+            <h4 className="mr-auto">Info</h4>
+            <div>
+              <ul>
+                <li>
+                  <strong>client</strong>: {props.client}
+                </li>
+                <li>
+                  <strong>Location</strong>: {props.address}
+                </li>
+                <li>
+                  <strong>Area</strong>: {props.area}
+                </li>
+              </ul>
+            </div>
+          </Modal.Footer>
+        </Modal>
+      </>
     );
+  }
 }
 
 export default ProjectView;
