@@ -5,12 +5,11 @@ import MyNav from "./components/Nav";
 import ProjectView from "./components/ProjectView";
 import Footer from "./components/Footer";
 import { Container, Row } from "react-bootstrap";
-// import projectList from "./ProjectsList";
 
 function Projects() {
 
   const client = sanityClient({
-    projectId: 'u8dc6y32',
+    projectId: process.env.REACT_APP_PROJECT_ID,
     dataset: 'production',
     apiVersion: '2021-10-21',
     useCdn: true
