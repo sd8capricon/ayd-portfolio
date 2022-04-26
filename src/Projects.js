@@ -1,42 +1,80 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import sanityClient from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
 import MyNav from "./components/Nav";
 import ProjectView from "./components/ProjectView";
 import Footer from "./components/Footer";
 import { Container, Row } from "react-bootstrap";
-import projectList from "./ProjectsList";
+// import projectList from "./ProjectsList";
 
 function Projects() {
-  function createProject(project) {
+
+  const client = sanityClient({
+    projectId: 'u8dc6y32',
+    dataset: 'production',
+    apiVersion: '2021-10-21',
+    useCdn: true
+  })
+  const builder = imageUrlBuilder(client)
+  const urlBuilder = (source) => {
+    return builder.image(source)
+  }
+
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    let query = "*[_type == 'project']{_id,name,client,location,area,previewImage,images}"
+    client.fetch(query).then((res) => {
+      res.forEach(ele => {
+        ele.previewImage = urlBuilder(ele.previewImage.asset).url()
+        ele.images.forEach(ele => {
+          ele.asset = urlBuilder(ele.asset).url()
+        })
+      })
+      setProjects(res)
+    })
+  }, [])
+
+
+
+
+  function createProject(project, key) {
+    let imgList = []
+    project.images.forEach(element => {
+      imgList.push(element.asset)
+    });
     return (
       <ProjectView
-        key={project.id}
+        key={key}
         project={{
-          id: project.id,
+          id: project._id,
           name: project.name,
           client: project.client,
-          address: project.address,
+          location: project.address,
           area: project.area,
-          previewImg: project.imgMain
+          previewImg: project.previewImage
         }}
-        imgs={[project.img1, project.img2, project.img3]}
+        imgs={imgList}
       />
     );
   }
 
-  return (
-    <div>
-      <MyNav />
-      <br /><br /><br />
-      <Container fluid className="project-container">
-        <Row md={2} noGutters={true}>
-          <>{projectList.map(createProject)}</>
-        </Row>
-      </Container>
-      <div className="footer">
-        <Footer />
+  if (projects.length !== 0) {
+    return (
+      <div>
+        <MyNav />
+        <br /><br /><br />
+        <Container fluid className="project-container">
+          <Row md={2}>
+            <>{projects.map(createProject)}</>
+          </Row>
+        </Container>
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Projects;
