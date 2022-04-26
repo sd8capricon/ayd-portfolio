@@ -55,6 +55,7 @@ const Projects = [
         id: 1,
         name: "Sahitya Ratna Annabhau Sathe Smarak",
         imgMain: ANNABHAU,
+        previewImg: ANNABHAU,
         img1: ANNABHAU,
         img2: ANNA1,
         img3: ANNA2,

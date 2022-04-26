@@ -115,18 +115,17 @@ body {
   color: black;
 }
 
-.close {
-  color: white;
-  font-size: 40px;
-}
-
 .modal-header {
   color: white;
   background-color: black;
 }
 
+.btn-close{
+  background-color: white;
+}
+
 .modal-body {
-  background-color: grey;
+  background-color: black;
   padding: 0%;
 }
 
