@@ -103,6 +103,16 @@ body {
   left: 2%;
   z-index: 10;
   transition-duration: 0.7s;
+  opacity: 0;
+}
+
+.project-button:hover .project-img{
+  opacity: 0.5;
+}
+
+.project-button:hover .project-sub{
+  opacity: 1;
+  color: black;
 }
 
 .close {

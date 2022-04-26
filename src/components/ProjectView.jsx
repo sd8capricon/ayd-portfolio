@@ -33,7 +33,7 @@ function ProjectView(props) {
         }
     */
 
-  useMemo(() => {
+  useEffect(() => {
     setProject(props.project);
     console.log(props.imgs);
     setProjectImgs(props.imgs);
@@ -48,21 +48,14 @@ function ProjectView(props) {
           data-aos-duration="1000"
         >
           <button className="project-button" onClick={handleOpen}>
-            <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseOut}>
+            <div>
               <img
                 className="project-img"
                 src={props.imgMain}
                 alt="project"
-                style={isHover ? { opacity: "0.5" } : { opacity: "1" }}
+                // style={isHover ? { opacity: "0.5" } : { opacity: "1" }}
               />
-              <h3
-                className="project-sub"
-                style={
-                  isHover ? { opacity: "1", color: "black" } : { opacity: "0" }
-                }
-              >
-                {props.name}
-              </h3>
+              <h3 className="project-sub">{props.name}</h3>
             </div>
           </button>
         </Col>
