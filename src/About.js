@@ -1,14 +1,14 @@
 import React from "react";
-import MyNav from "./components/Nav";
+import NavBar from "./components/NavBar/Nav";
 import { Nav } from "react-bootstrap";
 import Services from "./components/Services";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import "./App.css"
 
 function About() {
   return (
     <div>
-      <MyNav />
+      <NavBar />
       <br />
       <Nav className="justify-content-center about-nav" activeKey="/home" style={{ backgroundColor: "black", padding: "0.5%" }}>
         <Nav.Item>

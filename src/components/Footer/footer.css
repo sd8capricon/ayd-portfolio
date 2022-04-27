@@ -1,0 +1,63 @@
+/* Footer */
+
+.footer {
+    margin-top: 2%;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .footerC {
+    color: white;
+    display: block;
+    position: relative;
+    bottom: 0;
+    z-index: 100;
+  }
+  
+  .footer-C-sub {
+    text-align: center;
+  }
+  
+  .footer-ico {
+    margin: 0% 1%;
+    font-size: 2rem;
+  }
+  
+  .footer-copyright {
+    margin: 1.3% 0% 2%;
+  }
+  
+  /* icons */
+  
+  .fa-envelope {
+    color: red;
+  }
+  
+  .fa-envelope:hover {
+    color: rgb(199, 0, 0);
+  }
+  
+  .fa-facebook-square {
+    color: rgb(0, 81, 255) !important;
+  }
+  
+  .fa-facebook-square:hover {
+    color: blue !important;
+  }
+  
+  .fa-blogger {
+    color: #fc9a08;
+  }
+  
+  .fa-blogger:hover {
+    color: #c57600;
+  }
+  
+  .fa-linkedin {
+    color: #00a6ff;
+  }
+  
+  .fa-linkedin:hover {
+    color: #006ca7;
+  }

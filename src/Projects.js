@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
-import MyNav from "./components/Nav";
+import NavBar from "./components/NavBar/Nav";
 import ProjectView from "./components/ProjectView";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import { Container, Row } from "react-bootstrap";
 
 function Projects() {
@@ -32,7 +32,7 @@ function Projects() {
       })
       setProjects(res)
     })
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
 
 
@@ -61,7 +61,7 @@ function Projects() {
   if (projects.length !== 0) {
     return (
       <div>
-        <MyNav />
+        <NavBar />
         <br /><br /><br />
         <Container fluid className="project-container">
           <Row md={2}>
