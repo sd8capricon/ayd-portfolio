@@ -49,7 +49,7 @@ function Projects() {
           id: project._id,
           name: project.name,
           client: project.client,
-          location: project.address,
+          location: project.location,
           area: project.area,
           previewImg: project.previewImage
         }}
