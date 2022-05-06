@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from "react-bootstrap";
 import "./navbar.css";
@@ -6,24 +6,12 @@ import "./navbar.css";
 //Brand
 import Logo from "../../images/YCDLogo2.png";
 
-function NavBar(props) {
-  const [hover, setHover] = useState(false);
-  function setColor() {
-    setHover(true);
-  }
-  function removeColor() {
-    setHover(false);
-  }
+function NavBar({ transparency }) {
   return (
     <Navbar
       variant="dark"
-      onMouseOver={setColor}
-      style={
-        hover ? { backgroundColor: "black" } : { backgroundColor: props.color }
-      }
-      onMouseLeave={removeColor}
       collapseOnSelect={true}
-      className="navbar"
+      className={"navbar " + (transparency === true ? "transparency" : "")}
       expand="lg"
     >
       <Navbar.Brand href="/" className="nav-brand">

@@ -7,7 +7,8 @@ import "./App.css";
 function Home() {
   return (
     <div>
-      <NavBar color="transparent" />
+      {/* <NavBar color="transparent" /> */}
+      <NavBar transparency={true} />
       <div data-aos="zoom-in-up" data-aos-duration="700">
         <ImageCarousel />
       </div>
