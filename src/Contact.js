@@ -29,15 +29,15 @@ function Contact() {
         <br />
         <address>
           <strong>Office</strong><br />
-          581/33, Adarsh Nagar,<br />
-          Worli,
-          Mumbai 400030,<br />
-          Maharashtra,<br />
+          2338/49 Gandhi Nagar Opp. MIG Club,<br />
+          Bandra East,
+          Mumbai,<br />
+          Maharashtra 400051,<br />
           India
         </address>
       </div>
       <div data-aos="zoom-in-up" data-aos-duration="1000">
-        <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Architect+Yogesh+Dhaigude/@19.0146542,72.8223423,15z/data=!4m2!3m1!1s0x0:0xd2cf514881c07906?sa=X&ved=2ahUKEwjm2665_KLtAhWCyzgGHW1RA4EQ_BIwE3oECBIQAw">
+        <a target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/Architect+Yogesh+Dhaigude/@19.0568816,72.8453391,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7cf27ae09120f:0xd2cf514881c07906!8m2!3d19.0568759!4d72.8475429">
           <img className="map-img" src={map} alt="map" />
         </a>
       </div>
