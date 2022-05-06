@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Col, Modal, Carousel } from "react-bootstrap";
+import "./project.css";
 
 function ProjectView(props) {
   const [show, setShow] = useState(false);

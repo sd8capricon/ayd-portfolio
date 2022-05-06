@@ -1,0 +1,62 @@
+/* Project */
+
+.project-button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+  
+  .project-column {
+    padding: 0;
+  }
+  
+  .project-img {
+    width: 100%;
+    overflow-x: hidden;
+    transition-duration: 0.7s;
+  }
+  
+  .project-sub {
+    color: white !important;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: capitalize;
+    position: fixed;
+    top: 90%;
+    left: 2%;
+    z-index: 10;
+    transition-duration: 0.7s;
+    opacity: 0;
+  }
+  
+  .project-button:hover .project-img{
+    opacity: 0.5;
+  }
+  
+  .project-button:hover .project-sub{
+    opacity: 1;
+    color: black;
+  }
+  
+  .modal-header {
+    color: white;
+    background-color: black;
+  }
+  
+  .btn-close{
+    background-color: white;
+  }
+  
+  .modal-body {
+    background-color: black;
+    padding: 0%;
+  }
+  
+  .modal-footer {
+    margin: 0%;
+    padding: 0%;
+    display: block;
+  }

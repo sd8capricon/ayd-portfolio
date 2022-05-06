@@ -28,7 +28,7 @@ function About() {
       <div className="section" id="ABOUT" data-aos="zoom-in-up" data-aos-duration="1000">
         <h1 className="section-title">ABOUT US</h1>
         <p className="section-p">
-          We are an established multi-desciplinary comprehensive Architectural practice based in Mumbai & Thane, founded by Architect Yogesh Dhaigude with extensive experience in developing a wide range of projects such as Redevelopment of large and small scale residential projects, masterplanning schemes, commercial buildings with expertise in integration of MEP services and structure with design at an advance and complex level in view of time and cost efficiency. We are committed to designing high quality buildings that meet the needs and aspirations of clients and users alike and achieve complete client satisfaction.
+          We are an established multi-disciplinary comprehensive Architectural practice based in Mumbai & Thane, founded by Architect Yogesh Dhaigude with extensive experience in developing a wide range of projects such as Redevelopment of large and small scale residential projects, masterplanning schemes, commercial buildings with expertise in integration of MEP services and structure with design at an advance and complex level in view of time and cost efficiency. We are committed to designing high quality buildings that meet the needs and aspirations of clients and users alike and achieve complete client satisfaction.
         </p>
         <ul className="about-list">
           <li>

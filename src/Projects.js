@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import NavBar from "./components/NavBar/Nav";
-import ProjectView from "./components/ProjectView";
+import Project from "./components/Project/Project";
 import Footer from "./components/Footer/Footer";
 import { Container, Row } from "react-bootstrap";
 
@@ -43,7 +43,7 @@ function Projects() {
       imgList.push(element.asset)
     });
     return (
-      <ProjectView
+      <Project
         key={key}
         project={{
           id: project._id,
@@ -65,7 +65,7 @@ function Projects() {
         <br /><br /><br />
         <Container fluid className="project-container">
           <Row md={2}>
-            <>{projects.map(createProject)}</>
+            {projects.map(createProject)}
           </Row>
         </Container>
         <div className="footer">
