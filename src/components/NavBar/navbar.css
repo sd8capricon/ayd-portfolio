@@ -34,3 +34,14 @@
 .nav-links:hover {
   text-decoration: underline;
 }
+
+
+/* media */
+@media screen and (max-width: 768px) {
+  .nav-img {
+    margin: 0;
+    padding: 0;
+    width: 16rem;
+    height: 1.8rem;
+  }
+}
