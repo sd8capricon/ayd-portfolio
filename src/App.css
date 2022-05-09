@@ -71,19 +71,7 @@ body {
 }
 
 
-/* media */
-@media screen and (max-width: 768px) {
-  
-  .project-sub {
-    left: 50%;
-  }
-
-  .project-img {
-    text-align: center !important;
-    width: 100vw !important;
-  }
-}
-
+/* Media */
 @media screen and (min-width: 992px) {
   .about-section {
     padding-left: 13%;

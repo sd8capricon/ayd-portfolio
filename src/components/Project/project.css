@@ -60,3 +60,17 @@
     padding: 0%;
     display: block;
   }
+  
+
+/* media */
+@media screen and (max-width: 768px) {
+  
+  .project-sub {
+    left: 50%;
+  }
+
+  .project-img {
+    text-align: center !important;
+    width: 100vw !important;
+  }
+}
