@@ -22,7 +22,7 @@ function Projects() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    let query = "*[_type == 'project']{_id,name,client,location,area,previewImage,images}"
+    let query = "*[_type == 'project']|order(sr_no){_id,name,client,location,area,previewImage,images}"
     client.fetch(query).then((res) => {
       res.forEach(ele => {
         ele.previewImage = urlBuilder(ele.previewImage.asset).url()
